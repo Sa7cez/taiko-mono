@@ -207,7 +207,7 @@
         style={`min-height: calc(${transactionsToShow.length} * ${isDesktopOrLarger ? '80px' : '66px'});`}>
         <div class="h-sep" />
         {#if isDesktopOrLarger}
-          <div class="text-primary-content flex">
+          <div class="text-primary-content flex md:text-sm lg:text-base">
             {#if $activeBridge === BridgeTypes.FUNGIBLE}
               <div class="w-1/5 py-2 text-secondary-content">{$t('transactions.header.from')}</div>
               <div class="w-1/5 py-2 text-secondary-content">{$t('transactions.header.to')}</div>
@@ -216,7 +216,7 @@
                 {$t('transactions.header.status')}
                 <StatusInfoDialog />
               </div>
-              <div class="w-1/5 py-2 text-secondary-content">{$t('transactions.header.explorer')}</div>
+              <div class="w-1/5 text-right py-2 text-secondary-content">{$t('transactions.header.explorer')}</div>
             {:else if $activeBridge === BridgeTypes.NFT}
               <div class="w-3/12 content-center py-2 text-secondary-content">{$t('transactions.header.item')}</div>
               <div class="w-2/12 content-center py-2 text-secondary-content">{$t('transactions.header.from')}</div>
@@ -242,7 +242,7 @@
 
         {#if renderTransactions}
           <div
-            class="flex flex-col items-center"
+            class="flex flex-col items-center md:text-sm lg:text-base"
             style={isBlurred ? `filter: blur(5px); transition: filter ${transitionTime / 1000}s ease-in-out` : ''}>
             {#each transactionsToShow as item (item.hash)}
               <Transaction {item} />

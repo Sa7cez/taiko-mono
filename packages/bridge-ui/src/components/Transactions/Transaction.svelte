@@ -198,10 +198,10 @@
     </div>
     <div class="hidden md:flex w-1/5 py-2 flex flex-col justify-center">
       <a
-        class="flex justify-start py-3 link"
+        class="flex justify-end py-3 link"
         href={`${chainConfig[Number(item.srcChainId)]?.blockExplorers?.default.url}/tx/${item.hash}`}
         target="_blank">
-        {$t('transactions.link.explorer')}
+        <span class="md:hidden lg:flex">{$t('transactions.link.explorer')}</span>
         <Icon type="arrow-top-right" fillClass="fill-primary-link" />
       </a>
     </div>

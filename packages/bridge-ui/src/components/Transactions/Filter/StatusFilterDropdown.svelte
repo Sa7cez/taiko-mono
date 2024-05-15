@@ -48,7 +48,7 @@
   <button
     aria-haspopup="listbox"
     aria-expanded={menuOpen}
-    class="f-between-center w-[210px] min-h-[36px] max-h-[36px] px-6 bg-neutral border-0 shadow-none outline-none rounded-[6px]"
+    class="f-between-center space-x-2 max-w-[210px] min-h-[36px] max-h-[36px] px-6 bg-neutral border-0 shadow-none outline-none rounded-[6px]"
     on:click|stopPropagation={toggleMenu}>
     <span class="text-primary-content font-bold">
       {selectedStatus !== null
